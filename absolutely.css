@@ -1,16 +1,179 @@
-body {
-	text-align : center;
-	font-family : Tahoma;
-	font-size : 14px;
-	background-color : black;
-	/* toe te voegen */
-}
-.all {
-	text-align : left;
-	width : 700px;
-	margin : 100px auto;
-	min-height : 600px;
-	background-image : url(bg.jpg);
-	border : 4px solid red;
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
 }
 
+body {
+	text-align: center;
+	font: 14px/1.4 Tahoma;
+	background-color: black;
+}
+
+.wrapper {
+	text-align: left;
+	width: 700px;
+	margin: 100px auto;
+	min-height: 600px;
+	background-image: url(bg.jpg);
+	border: 4px solid red;
+	position:relative;
+}
+
+#content-wrapper {
+	background-color: rgba(255, 255, 255, 0.3);
+	padding: 1px 3px 1px 8px;
+	margin-top: 10px;
+	line-height: 18px;
+}
+
+#toolbox:hover ul {
+    display: block;
+    position: absolute;
+}
+
+#title {
+	position: relative;
+	bottom: 170px;
+	left: 20px;
+}
+
+#hammer {
+	bottom: 70px;
+	left: 0px;
+}
+
+#saw {
+	top: 50px;
+	right: 355px;
+}
+
+#pincers {
+	bottom: 5px;
+	left: 560px;
+}
+
+#screwdriver {
+	bottom: 130px;
+	left: 350px;
+}
+
+#hammer, #saw, #pincers, #screwdriver {
+	position: relative;
+	transition: all 0.5s;
+}
+
+#hammer:hover, #saw:hover, #pincers:hover, #screwdriver:hover {
+	transition: all 0.5s;
+}
+
+#hammer:hover {
+	bottom: 60px;
+	left: -10px;
+}
+
+#saw:hover {
+	top: 70px;
+	right: 330px;
+}
+
+#pincers:hover {
+	bottom: 5px;
+	left: 530px;
+}
+
+#screwdriver:hover {
+	bottom: 120px;
+	left: 330px;
+}
+
+#toolbox {
+    position: relative;
+	bottom: 20px;
+	right: 175px;
+}
+
+nav {
+    background: url('bar1.png'); 
+    overflow: hidden;
+}
+
+nav a {
+	color: #474747;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 5px;
+}
+
+nav:hover a {
+	color: black;
+}
+
+nav:hover {
+	background: url('bar2.png');
+}
+
+p {
+	padding: 5px 5px;
+}
+
+h1 {
+	padding: 15px 0 0 5px;
+}
+
+ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    bottom: -60px;
+    left: -8px;
+}
+
+ul li {
+	list-style-type: none;
+	display: block;
+	position: relative;
+}
+
+ul a {
+	border: black 1px solid;
+    color: black;
+    padding: 7px;
+    text-decoration: none;
+    display: block;
+}
+
+span ul a:hover {
+	background-color: yellow;
+	color: black
+}
+
+span ul a {
+	color: grey;
+} 
+
+#tooltip {
+    color: blue;
+    position: relative;
+}
+
+#tooltip #tooltip-text {
+    visibility: hidden;
+    width: 210px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border: 2px solid blue;
+    border-radius: 8px;
+    padding: 7px 0px 7px 4px;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0%;
+
+}
+
+#tooltip:hover #tooltip-text {
+    visibility: visible;
+}
